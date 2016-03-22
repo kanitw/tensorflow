@@ -183,9 +183,9 @@ export function appendEdge(edgeGroup, d: EdgeData,
   }
   edgeGroup.append("text").append("textPath").attr({
       "xlink:href": "#" + pathId,
-      "startOffset": "50%",
+      "startOffset": "65%",
       "text-anchor": "middle",
-      "dominant-baseline": "central"
+      "dominant-baseline": "text-after-edge"
   }).text(labelForEdge);
 };
 
