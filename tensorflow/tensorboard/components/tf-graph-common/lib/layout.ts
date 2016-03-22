@@ -29,7 +29,7 @@ export const PARAMS = {
        *
        * See https://github.com/cpettitt/dagre/wiki#configuring-the-layout
        */
-      nodeSep: 10,
+      nodeSep: 30,
       /**
        * Dagre's ranksep param - number of pixels
        * between each rank in the layout.
