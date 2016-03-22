@@ -1363,6 +1363,7 @@ function extractHighInDegree(renderNode: RenderGroupNodeInfo,
   });
 
   _.each(highInDegreeNames, n => {
+    console.log("high in degree", renderNode); 
     makeOutExtract(renderNode, n, params);
   });
 }
@@ -1394,6 +1395,7 @@ function extractHighOutDegree(renderNode: RenderGroupNodeInfo,
   });
 
   _.each(highOutDegreeNames, n => {
+    console.log("high out degree", renderNode); 
     makeInExtract(renderNode, n, params);
   });
 }
