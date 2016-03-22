@@ -1330,7 +1330,7 @@ function extractPredefinedSource(renderNode: RenderGroupNodeInfo,
     if (renderInfo.node.include !== InclusionType.UNSPECIFIED) {
       return;
     }
-    if (hasTypeIn(renderInfo.node, params.inExtractTypes)) {
+    if (hasTypeIn(renderInfo.node, params.inExtractTypes) && renderInfo.node.type !== NodeType.OP) {
       makeInExtract(renderNode, n, params);
     }
   });
