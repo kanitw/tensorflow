@@ -7,6 +7,12 @@ An element which provides a filter parsing for pbtxt to graph output.
 </dom-module>
 
 <script>
+var inEmbeddingTypes = [];
+inEmbeddingTypes = ['Const'];
+
+var outEmbeddingTypes = [],
+outEmbeddingTypes = ['^[a-zA-Z]+Summary$'];
+
 Polymer({
 
   is: 'tf-graph-loader',
@@ -103,8 +109,8 @@ Polymer({
       refEdges["scatter_update 0"] = true;
       var buildParams = {
         enableEmbedding: true,
-        inEmbeddingTypes: ['Const'],
-        outEmbeddingTypes: ['^[a-zA-Z]+Summary$'],
+        inEmbeddingTypes: inEmbeddingTypes, // ['Const'],
+        outEmbeddingTypes: outEmbeddingTypes, //['^[a-zA-Z]+Summary$'],
         refEdges: refEdges
       };
       var graphTracker = tf.getSubtaskTracker(tracker, 20,

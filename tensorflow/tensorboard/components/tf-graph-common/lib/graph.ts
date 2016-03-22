@@ -16,6 +16,7 @@ module tf.graph {
 
 /** Delimiter used in node names to denote namespaces. */
 export const NAMESPACE_DELIM = "/";
+export const FILTER = [];
 export const ROOT_NAME = "__root__";
 
 /** Attribute key used for storing attributes that are too large. */
@@ -837,6 +838,16 @@ export function build(rawNodes: tf.TFNode[], params: BuildParams,
     let index = 0;
     _.each(rawNodes, rawNode => {
       let opNode = new OpNodeImpl(rawNode);
+      if (FILTER.length) {
+        var included = false;
+        for (var i=0; i< FILTER.length; i++) {
+          if (opNode.name.indexOf("test/") ===0 ) {
+            included = true;
+            break;
+          }
+        }
+        if (!included) return;
+      }
       if (isInEmbeddedPred(opNode)) {
         embeddingNodeNames.push(opNode.name);
         inEmbedding[opNode.name] = opNode;
