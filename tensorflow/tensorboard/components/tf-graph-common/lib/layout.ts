@@ -29,19 +29,19 @@ export const PARAMS = {
        *
        * See https://github.com/cpettitt/dagre/wiki#configuring-the-layout
        */
-      nodeSep: 5,
+      nodeSep: 10,
       /**
        * Dagre's ranksep param - number of pixels
        * between each rank in the layout.
        *
        * See https://github.com/cpettitt/dagre/wiki#configuring-the-layout
        */
-      rankSep: 25,
+      rankSep: 20,
       /**
        * Dagre's edgesep param - number of pixels that separate
        * edges horizontally in the layout.
        */
-      edgeSep: 5,
+      edgeSep: 10,
     },
     /** Graph parameter for metanode. */
     series: {
@@ -51,7 +51,7 @@ export const PARAMS = {
        *
        * See https://github.com/cpettitt/dagre/wiki#configuring-the-layout
        */
-      nodeSep: 5,
+      nodeSep: 15,
       /**
        * Dagre's ranksep param - number of pixels
        * between each rank in the layout.
@@ -63,7 +63,7 @@ export const PARAMS = {
        * Dagre's edgesep param - number of pixels that separate
        * edges horizontally in the layout.
        */
-      edgeSep: 5
+      edgeSep: 15
     },
     /**
      * Padding is used to correctly position the graph SVG inside of its parent
@@ -78,8 +78,8 @@ export const PARAMS = {
   subscene: {
     meta: {
       paddingTop: 10,
-      paddingBottom: 10,
-      paddingLeft: 10,
+      paddingBottom: 0, //10
+      paddingLeft: 0,
       paddingRight: 10,
       /**
        * Used to leave room for the label on top of the highest node in

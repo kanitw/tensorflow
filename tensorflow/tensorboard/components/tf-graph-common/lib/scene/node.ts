@@ -342,7 +342,7 @@ export function getGroupSettingLabel(node: Node) {
 function labelBuild(nodeGroup, renderNodeInfo: render.RenderNodeInfo,
     sceneElement) {
   let namePath = renderNodeInfo.node.name.split("/");
-  let text = namePath[namePath.length - 1];
+  let text = renderNodeInfo.node.name; // namePath[namePath.length - 1];
 
   // Truncate long labels for unexpanded Metanodes.
   let useFontScale = renderNodeInfo.node.type === NodeType.META &&

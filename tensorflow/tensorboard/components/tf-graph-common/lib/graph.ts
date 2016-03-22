@@ -13,10 +13,13 @@ See the License for the specific language governing permissions and
 limitations under the License.
 ==============================================================================*/
 module tf.graph {
+  
+export const FILTER = ["^weights", "^zeros$", "^HistogramSummary$"];
+// export const FILTER = [];
 
 /** Delimiter used in node names to denote namespaces. */
-export const NAMESPACE_DELIM = "/";
-export const FILTER = [];
+// export const NAMESPACE_DELIM = ":::";
+export const NAMESPACE_DELIM = ":::";
 export const ROOT_NAME = "__root__";
 
 /** Attribute key used for storing attributes that are too large. */
@@ -844,7 +847,7 @@ export function build(rawNodes: tf.TFNode[], params: BuildParams,
           let regExp = new RegExp(FILTER[i]);
           if (opNode.name.match(regExp)) { 
             included = true;
-            break;
+            break;  
           }
         }
         if (!included) return;
