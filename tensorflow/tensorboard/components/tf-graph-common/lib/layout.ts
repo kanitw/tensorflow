@@ -78,9 +78,9 @@ export const PARAMS = {
   subscene: {
     meta: {
       paddingTop: 10,
-      paddingBottom: 0, //10
-      paddingLeft: 0,
-      paddingRight: 10,
+      paddingBottom: 10, //10
+      paddingLeft: -5,
+      paddingRight: 0,
       /**
        * Used to leave room for the label on top of the highest node in
        * the core graph.

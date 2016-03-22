@@ -19,7 +19,7 @@ export const FILTER = ["^weights", "^zeros$", "^HistogramSummary$"];
 
 /** Delimiter used in node names to denote namespaces. */
 // export const NAMESPACE_DELIM = ":::";
-export const NAMESPACE_DELIM = ":::";
+export const NAMESPACE_DELIM = "/";
 export const ROOT_NAME = "__root__";
 
 /** Attribute key used for storing attributes that are too large. */
