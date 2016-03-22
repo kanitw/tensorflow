@@ -293,6 +293,12 @@ def main(_):
                                                 config.init_scale)
     with tf.variable_scope("model", reuse=None, initializer=initializer):
       m = PTBModel(is_training=True, config=config)
+
+    graph_str = str(session.graph.as_graph_def(add_shapes=True))
+    outfile = open("/tmp/ptb_word_lm.pbtxt", "w")
+    outfile.write(graph_str)
+    outfile.close()
+    return
     with tf.variable_scope("model", reuse=True, initializer=initializer):
       mvalid = PTBModel(is_training=False, config=config)
       mtest = PTBModel(is_training=False, config=eval_config)

@@ -97,6 +97,12 @@ def train():
     summary_writer = tf.train.SummaryWriter(FLAGS.train_dir,
                                             graph_def=graph_def)
 
+    graph_str = str(graph_def)
+    outfile = open("/tmp/cifar10_train.pbtxt", "w")
+    outfile.write(graph_str)
+    outfile.close()
+    return
+
     for step in xrange(FLAGS.max_steps):
       start_time = time.time()
       _, loss_value = sess.run([train_op, loss])
