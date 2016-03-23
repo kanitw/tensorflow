@@ -29,19 +29,19 @@ export const PARAMS = {
        *
        * See https://github.com/cpettitt/dagre/wiki#configuring-the-layout
        */
-      nodeSep: -5,
+      nodeSep: 5,
       /**
        * Dagre's ranksep param - number of pixels
        * between each rank in the layout.
        *
        * See https://github.com/cpettitt/dagre/wiki#configuring-the-layout
        */
-      rankSep: 10,
+      rankSep: 15,
       /**
        * Dagre's edgesep param - number of pixels that separate
        * edges horizontally in the layout.
        */
-      edgeSep: 2,
+      edgeSep: 5,
     },
     /** Graph parameter for metanode. */
     series: {
