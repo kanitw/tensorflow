@@ -29,19 +29,19 @@ export const PARAMS = {
        *
        * See https://github.com/cpettitt/dagre/wiki#configuring-the-layout
        */
-      nodeSep: 5,
+      nodeSep: -5,
       /**
        * Dagre's ranksep param - number of pixels
        * between each rank in the layout.
        *
        * See https://github.com/cpettitt/dagre/wiki#configuring-the-layout
        */
-      rankSep: 25,
+      rankSep: 10,
       /**
        * Dagre's edgesep param - number of pixels that separate
        * edges horizontally in the layout.
        */
-      edgeSep: 5,
+      edgeSep: 2,
     },
     /** Graph parameter for metanode. */
     series: {
@@ -173,9 +173,9 @@ export const PARAMS = {
   },
   annotations: {
     /** Maximum possible width of the bounding box for in annotations */
-    inboxWidth: 50,
+    inboxWidth: 20,
     /** Maximum possible width of the bounding box for out annotations */
-    outboxWidth: 50,
+    outboxWidth: 20,
     /** X-space between the shape and each annotation-node. */
     xOffset: 10,
     /** Y-space between each annotation-node. */
