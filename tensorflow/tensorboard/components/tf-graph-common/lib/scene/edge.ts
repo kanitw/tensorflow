@@ -185,7 +185,7 @@ export function appendEdge(edgeGroup, d: EdgeData,
       "xlink:href": "#" + pathId,
       "startOffset": "50%",
       "text-anchor": "middle",
-      "dominant-baseline": "central"
+      "dominant-baseline": strokeWidth > 2.5 ? "central" : "text-after-edge"
   }).text(labelForEdge);
 };
 
